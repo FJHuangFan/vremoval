@@ -1,0 +1,57 @@
+{
+  "name": "video-parser-app",
+  "version": "1.0.0",
+  "description": "视频解析无水印下载工具",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "chcp 65001 && electron .",
+    "build": "node src/utils/build.js"
+  },
+  "keywords": [
+    "electron",
+    "video",
+    "parser"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^36.0.0",
+    "electron-builder": "^25.1.8",
+    "javascript-obfuscator": "^4.1.1"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  },
+  "build": {
+    "appId": "com.videoparser.app",
+    "productName": "视频解析工具",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "src/assets/image/logo.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "src/assets/image/logo.ico",
+      "uninstallerIcon": "src/assets/image/logo.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "files": [
+      "src/**/*",
+      "!src/**/*.backup.js"
+    ],
+    "asar": false
+  }
+}
+

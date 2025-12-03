@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频解析工具</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../../components/toast.css">
+    <link rel="stylesheet" href="../../components/dialog.css">
+</head>
+<body>
+    <div class="title-bar">
+        <div class="title-bar-left">
+            <img src="../../assets/image/logo.png" alt="Logo" class="title-logo">
+            <span class="title-text">视频解析工具</span>
+        </div>
+        <div class="title-bar-right">
+            <button class="title-btn minimize-btn" id="minimizeBtn">
+                <svg width="12" height="12" viewBox="0 0 12 12">
+                    <rect x="0" y="5" width="12" height="2" fill="currentColor"/>
+                </svg>
+            </button>
+            <button class="title-btn maximize-btn" id="maximizeBtn">
+                <svg width="12" height="12" viewBox="0 0 12 12">
+                    <rect x="1" y="1" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </button>
+            <button class="title-btn close-btn" id="closeBtn">
+                <svg width="12" height="12" viewBox="0 0 12 12">
+                    <path d="M1 1 L11 11 M11 1 L1 11" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <nav class="menu">
+                <div class="menu-item active" data-page="parser">
+                    <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="menu-text">视频解析</span>
+                </div>
+                <div class="menu-item" data-page="live">
+                    <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                        <path d="M12 2C12 2 15 5 15 12C15 19 12 22 12 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M12 2C12 2 9 5 9 12C9 19 12 22 12 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="menu-text">抖音直播</span>
+                </div>
+                <div class="menu-item" data-page="download">
+                    <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="menu-text">下载管理</span>
+                </div>
+                <div class="menu-item" data-page="settings">
+                    <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="menu-text">设置</span>
+                </div>
+            </nav>
+            <div class="version-info">
+                <span id="versionText">v1.0.0</span>
+            </div>
+        </aside>
+
+        <main class="content-area">
+            <div id="contentFrame"></div>
+        </main>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+    <div id="dialogOverlay" class="dialog-overlay"></div>
+    <script src="../../components/toast.js"></script>
+    <script src="../../components/dialog.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+

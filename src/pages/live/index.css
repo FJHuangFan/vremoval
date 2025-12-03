@@ -1,0 +1,121 @@
+.live-container {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 24px 0;
+    display: flex;
+    align-items: center;
+}
+
+.coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.coming-soon-icon {
+    margin-bottom: 24px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.coming-soon-icon svg {
+    color: #8e2de2;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+.coming-soon-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 12px 0;
+}
+
+.coming-soon-desc {
+    font-size: 16px;
+    color: #718096;
+    margin: 0 0 40px 0;
+    max-width: 500px;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(142, 45, 226, 0.15);
+    border-color: #8e2de2;
+}
+
+.feature-item svg {
+    flex-shrink: 0;
+}
+
+.feature-item span {
+    font-size: 14px;
+    color: #4a5568;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* 滚动条样式 */
+.live-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.live-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.live-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    border-radius: 4px;
+}
+
+.live-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #7a25c4, #3a00b8);
+}
+

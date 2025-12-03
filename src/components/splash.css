@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../assets/fonts/SH.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'CustomFont', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.splash-container {
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.app-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: white;
+    width: 0;
+    transition: width 0.3s ease-out;
+}
+
+.loading-text {
+    font-size: 14px;
+    opacity: 0.9;
+}
+

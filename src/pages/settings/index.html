@@ -1,0 +1,35 @@
+<div class="settings-container">
+    <div class="card">
+        <h2 class="card-title">设置</h2>
+        <div class="settings-group">
+            <div class="setting-item">
+                <div class="setting-label">下载路径</div>
+                <div class="setting-value">
+                    <input type="text" id="downloadPath" class="input-text" readonly>
+                    <button id="selectPathBtn" class="btn-secondary">选择路径</button>
+                </div>
+            </div>
+            <div class="setting-item">
+                <div class="setting-label">自动下载</div>
+                <div class="setting-value">
+                    <label class="switch">
+                        <input type="checkbox" id="autoDownload">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <button id="saveBtn" class="save-btn">保存设置</button>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">关于</h2>
+        <div class="about-content">
+            <img src="../../assets/image/logo.png" alt="Logo" class="about-logo">
+            <h3 class="about-title">视频解析工具</h3>
+            <p class="about-version" id="aboutVersion">版本 1.0.0</p>
+            <p class="about-desc">支持多平台视频无水印解析下载</p>
+        </div>
+    </div>
+</div>
+

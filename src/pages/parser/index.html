@@ -1,0 +1,22 @@
+<div class="parser-container">
+    <div class="card">
+        <h2 class="card-title">视频解析</h2>
+        <div class="input-group">
+            <textarea id="videoUrl" class="input-textarea" placeholder="请粘贴视频分享链接（支持抖音、快手、小红书、B站等平台）" rows="4" spellcheck="false"></textarea>
+        </div>
+        <div class="btn-container">
+            <button id="parseBtn" class="btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="margin-right: 8px;">
+                    <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                开始解析
+            </button>
+        </div>
+    </div>
+
+    <div id="resultCard" class="card result-card" style="display: none;">
+        <h3 class="card-title">解析结果</h3>
+        <div id="resultContent" class="result-content"></div>
+    </div>
+</div>
+

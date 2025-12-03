@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.log
+*.backup.js
+.DS_Store
+Thumbs.db
+*.exe
+*.msi
+
